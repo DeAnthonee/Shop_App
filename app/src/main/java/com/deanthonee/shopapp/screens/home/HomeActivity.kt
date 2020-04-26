@@ -22,7 +22,7 @@ class HomeActivity : AppCompatActivity() {
 
     companion object {
 
-        fun newIntent(context: Context) = Intent(context,HomeActivity.javaClass)
+        fun newIntent(context: Context) = Intent(context,HomeActivity::class.java)
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

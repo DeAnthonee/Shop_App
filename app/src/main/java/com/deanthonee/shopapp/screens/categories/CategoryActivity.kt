@@ -10,7 +10,7 @@ class CategoryActivity : AppCompatActivity() {
 
     companion object {
 
-        fun newIntent(context: Context) = Intent(context,CategoryActivity.javaClass)
+        fun newIntent(context: Context) = Intent(context,CategoryActivity::class.java)
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

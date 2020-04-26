@@ -10,7 +10,7 @@ class ShoppingCartActivity : AppCompatActivity() {
 
     companion object {
 
-        fun newIntent(context: Context) = Intent(context,ShoppingCartActivity.javaClass)
+        fun newIntent(context: Context) = Intent(context,ShoppingCartActivity::class.java)
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

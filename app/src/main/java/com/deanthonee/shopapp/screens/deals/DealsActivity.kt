@@ -10,7 +10,7 @@ class DealsActivity : AppCompatActivity() {
 
     companion object {
 
-        fun newIntent(context: Context) = Intent(context,DealsActivity.javaClass)
+        fun newIntent(context: Context) = Intent(context,DealsActivity::class.java)
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
