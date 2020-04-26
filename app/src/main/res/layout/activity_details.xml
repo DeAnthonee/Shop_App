@@ -8,4 +8,63 @@
     tools:context=".screens.details.DetailsActivity"
     >
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/details_image_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".4"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/details_guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp"
+        />
+
+    <ImageView
+        android:id="@+id/details_product_pic"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@mipmap/ic_launcher_round"
+        app:layout_constraintBottom_toTopOf="@id/details_image_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/details_brand_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Brand"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@id/details_guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/details_product_pic"
+        />
+
+    <TextView
+        android:id="@+id/details_category_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@id/details_guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/details_brand_textview"
+        />
+
+    <TextView
+        android:id="@+id/details_price_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@id/details_guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/details_category_textview"
+        />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
