@@ -8,4 +8,6 @@
     tools:context=".screens.categories.CategoryActivity"
     >
 
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

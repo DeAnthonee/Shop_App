@@ -8,16 +8,191 @@
     tools:context=".screens.login.LoginActivity"
     >
 
-    <Button
-        android:id="@+id/login_button"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/login_horizontal_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Log in"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".5"
+        />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@id/login_horizontal_guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
 
+    <ImageView
+        android:id="@+id/login_welcome_image"
+        android:layout_width="67dp"
+        android:layout_height="67dp"
+        android:src="@drawable/background_rounded_card"
+        app:layout_constraintBottom_toTopOf="@id/login_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/login_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:textColor="@android:color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/login_cardview"
+        app:layout_constraintEnd_toEndOf="@id/login_welcome_image"
+        app:layout_constraintStart_toStartOf="@id/login_welcome_image"
+        app:layout_constraintTop_toBottomOf="@id/login_welcome_image"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/login_cardview"
+        android:background="@drawable/background_rounded_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/login_horizontal_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/login_horizontal_guideline"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/medium_margin_spacing">
+
+            <TextView
+                android:id="@+id/login_card_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin_spacing"
+                android:text="@string/login_card_title"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/medium_title_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/login_email_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_spacing_small"
+                android:layout_marginTop="@dimen/margin_spacing_really_small"
+                android:text="@string/email"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/login_card_title"
+                />
+
+            <EditText
+                android:id="@+id/login_email_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_spacing_small"
+                android:layout_marginEnd="@dimen/margin_spacing_small"
+                android:background="@drawable/background_rounded_card"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/margin_spacing_tiny"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/login_email_label"
+                tools:text="espiiking@gmail.com"
+                android:autofillHints=""
+                tools:ignore="LabelFor"
+                />
+
+            <TextView
+                android:id="@+id/login_password_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_spacing_small"
+                android:layout_marginTop="@dimen/margin_spacing_really_small"
+                android:text="@string/password"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/login_email_input"
+                />
+
+            <EditText
+                android:id="@+id/login_password_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_spacing_small"
+                android:layout_marginEnd="@dimen/margin_spacing_small"
+                android:background="@drawable/background_rounded_card"
+                android:inputType="textPassword"
+                android:padding="@dimen/margin_spacing_tiny"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/login_password_label"
+                tools:text="espiiking@gmail.com"
+                android:autofillHints=""
+                tools:ignore="LabelFor"
+                />
+
+            <Button
+                android:id="@+id/login_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_spacing_small"
+                android:layout_marginTop="@dimen/margin_spacing_small"
+                android:layout_marginEnd="@dimen/margin_spacing_small"
+                android:background="@drawable/background_rounded_card"
+                android:text="@string/login_card_title"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/login_password_input"
+                />
+
+            <TextView
+                android:id="@+id/login_remember_me_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_spacing_small"
+                android:text="@string/remember_me"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/login_button"
+                />
+
+            <CheckBox
+                android:id="@+id/login_remember_me_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_spacing_tiny"
+                app:layout_constraintBottom_toBottomOf="@id/login_remember_me_text"
+                app:layout_constraintEnd_toStartOf="@id/login_remember_me_text"
+                app:layout_constraintTop_toTopOf="@id/login_remember_me_text"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/login_sign_up_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_spacing_large"
+        android:text="@string/sign_up"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_cardview"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
