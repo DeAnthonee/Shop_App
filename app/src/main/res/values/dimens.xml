@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="medium_margin_spacing">24dp</dimen>
+    <dimen name="medium_title_text_size">24sp</dimen>
+    <dimen name="margin_spacing_small">16dp</dimen>
+    <dimen name="margin_spacing_really_small">8dp</dimen>
+    <dimen name="margin_spacing_tiny">4dp</dimen>
+    <dimen name="margin_spacing_large">32dp</dimen>
+</resources>
