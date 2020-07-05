@@ -25,8 +25,8 @@ class CategoryActivity : AppCompatActivity() {
     private fun initRcv() {
         val list = fakeList()
         val aadapter = ProductAdapter(list)
-        Log.d("milo","Rcv is ${list.toString()}")
-        val viewManager = LinearLayoutManager(this)
+        Log.d("milo", "Rcv is ${list.toString()}")
+        val viewManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         bindings.categoryRcv.layoutManager = viewManager
         bindings.categoryRcv.adapter = aadapter
         bindings.categoryRcv.setHasFixedSize(true)
@@ -47,9 +47,28 @@ class CategoryActivity : AppCompatActivity() {
             Product(name = "Product 6", price = "$60", brand = "Top Brand", category = "Vapes", imageUrl = "urlstring")
         val product7 =
             Product(name = "Product 7", price = "$75", brand = "Top Brand", category = "Vapes", imageUrl = "urlstring")
-        return listOf(product1, product2, product3, product4, product5, product6, product7, product1,
-            product2, product3, product4, product5, product6, product7, product1, product2, product3, product4, product5,
-            product6,product7
+        return listOf(
+            product1,
+            product2,
+            product3,
+            product4,
+            product5,
+            product6,
+            product7,
+            product1,
+            product2,
+            product3,
+            product4,
+            product5,
+            product6,
+            product7,
+            product1,
+            product2,
+            product3,
+            product4,
+            product5,
+            product6,
+            product7
         )
     }
 
